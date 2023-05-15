@@ -1,8 +1,5 @@
 name: "Hello World"
+
 description: "Simple example action"
-inputs:
-  example-param:
-    description: "An example parameter"
-runs:
-  using: "node16"
-  main: "./hoyolab-check-in.js"
+
+run: echo Hello, world!
