@@ -2,8 +2,11 @@ name: Cron Job
 
 on:
   # Triggers the workflow every 5 minutes
-  schedule:
-    - cron: "*/1 * * * *"
+  # schedule:
+  #   - cron: "*/1 * * * *"
+  push:
+    branches:
+      - main
 
 jobs:
   cron:
