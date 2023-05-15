@@ -4,9 +4,19 @@ on:
   workflow_call:
 
 jobs:
-  hello_world_job:
+  run_js:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Hello step
-        run: echo "Hello, world!"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run JavaScript file
+        run: node hoyolab-check-in.js
