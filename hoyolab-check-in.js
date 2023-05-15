@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const randomDelayExecuteTime = () => {
   // const MAX_THRESHOLD = 30 * 60 * 1000;
-  const MAX_THRESHOLD = 5000;
+  const MAX_THRESHOLD = 50000;
   const randomDelayExecuteTimeInMillisec = Math.random() * MAX_THRESHOLD;
   console.log(randomDelayExecuteTimeInMillisec);
   return new Promise((resolve) =>
