@@ -1,6 +1,7 @@
 name: Cron Job
 
-on: push
+on:
+  push:
 
 jobs:
   cron:
