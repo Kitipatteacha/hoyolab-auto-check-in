@@ -4,5 +4,5 @@ inputs:
   example-param:
     description: "An example parameter"
 runs:
-  using: "node12"
+  using: "node16"
   main: "./hoyolab-check-in.js"
