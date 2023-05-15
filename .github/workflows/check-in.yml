@@ -4,5 +4,9 @@ on:
   workflow_call:
 
 jobs:
-  steps:
-    - run: echo Hello, world!
+  hello_world_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello step
+        run: echo "Hello, world!"
