@@ -1,5 +1,7 @@
 name: "Hello World"
 
-description: "Simple example action"
+on:
+  workflow_call:
 
-run: echo Hello, world!
+jobs:
+  run: echo Hello, world!
