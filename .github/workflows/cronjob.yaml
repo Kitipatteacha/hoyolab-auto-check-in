@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./hoyolab-check-in.js
-        with:
-          milliseconds: 1000
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check-in
+        uses: ./.github/workflows/check-in
