@@ -4,4 +4,5 @@ on:
   workflow_call:
 
 jobs:
-  run: echo Hello, world!
+  steps:
+    - run: echo Hello, world!
