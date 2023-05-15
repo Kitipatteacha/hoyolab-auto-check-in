@@ -3,12 +3,14 @@ name: Cron Job
 on:
   # Triggers the workflow every 5 minutes
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/1 * * * *"
 
 jobs:
   cron:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - uses: actions/checkout@v3
+      - uses: ./hoyolab-check-in.js
+        with:
+          milliseconds: 1000
