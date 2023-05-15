@@ -21,6 +21,7 @@ const randomDelayExecuteTime = () => {
 };
 
 const checkIn = async (url, game) => {
+  console.log(`start check-in ${game}`);
   await randomDelayExecuteTime();
 
   const response = await axios.post(url, null, {
