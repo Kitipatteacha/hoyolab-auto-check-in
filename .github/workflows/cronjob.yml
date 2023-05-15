@@ -1,14 +1,18 @@
-name: Cron Job
+name: deploy staging
 
 on:
   push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
-  cron:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Check-in
-        uses: ./.github/workflows/test.yml
+  cache-yarn-deps:
+    uses: ./.github/workflows/test.yml
