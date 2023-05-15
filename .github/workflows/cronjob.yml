@@ -31,3 +31,5 @@ jobs:
 
       - name: Execute check-in script
         run: node hoyolab-check-in.js
+        with:
+          who-to-greet: "Mona the Octocat"
