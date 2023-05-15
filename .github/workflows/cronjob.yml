@@ -13,4 +13,4 @@ jobs:
       - name: Test
         run: echo "Test"
       - name: Check-in
-        uses: ./.github/workflows/check-in
+        uses: ./check-in.yml
