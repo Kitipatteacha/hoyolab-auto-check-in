@@ -16,4 +16,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check-in
-        uses: ./.github/workflows/check-in
+        uses: ./.github/workflows/check-in.yml
