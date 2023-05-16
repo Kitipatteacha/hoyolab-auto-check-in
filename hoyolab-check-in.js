@@ -28,7 +28,7 @@ const checkIn = async (url, game) => {
     headers,
   });
 
-  console.log(`${game} check-in result : ${response}`);
+  console.log(`${game} check-in result : ${JSON.stringify(response)}`);
 };
 
 const run = async () => {
