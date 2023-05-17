@@ -10,7 +10,7 @@ const starRailCheckInURL =
   "https://sg-public-api.hoyolab.com/event/luna/os/sign?lang=en-us&act_id=e202303301540311";
 
 const randomDelayExecuteTime = () => {
-  const MAX_THRESHOLD = 30 * 60 * 1000;
+  const MAX_THRESHOLD = 10 * 60 * 1000;
   const randomDelayExecuteTimeInMillisec = Math.random() * MAX_THRESHOLD;
   console.log(
     `will execute in :${randomDelayExecuteTimeInMillisec / (1000 * 60)} minutes`
