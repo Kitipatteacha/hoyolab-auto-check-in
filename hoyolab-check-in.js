@@ -23,12 +23,16 @@ const randomDelayExecuteTime = () => {
 const checkIn = async (url, game) => {
   console.log(`start check-in ${game}`);
   await randomDelayExecuteTime();
-
-  const response = await axios.post(url, null, {
+try{
+  await axios.post(url, null, {
     headers,
   });
 
-  console.log(`${game} checked ✅`);
+  console.log(`${game} checked success ✅`);
+}catch(){
+  console.log(`${game} checked fail ❌`)
+}
+
 };
 
 const run = async () => {
