@@ -1,9 +1,9 @@
 name: cronjob
 
-# Triggers the workflow every 2:00 AM UTC
+# Triggers the workflow every 4:00 AM UTC
 on:
   schedule:
-    - cron: "0 2 * * *"
+    - cron: "0 4 * * *"
 
 jobs:
   auto-check-in:
