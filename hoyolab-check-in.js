@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const headers = {
-  Cookie: `ltoken=${process.env.LTOKEN}; ltuid=${process.env.LTUID};`,
+  Cookie: `ltoken_v2=${process.env.LTOKEN_V2}; ltmid_v2=${process.env.LTMID_V2}; ltuid_v2=${LTUID_V2}`,
 };
 const checkInList = [
   {

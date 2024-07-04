@@ -17,4 +17,4 @@
 ## Note
 
 - Must wating on 4:00 AM UTC to start claim reward
-- reward will be random claimed in 30 minutes after start claiming process
+- reward will be random claimed in 10 minutes after start claiming process

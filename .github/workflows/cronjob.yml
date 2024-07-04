@@ -3,14 +3,15 @@ name: cronjob
 # Triggers the workflow every 4:00 AM UTC
 on:
   schedule:
-    - cron: "0 4 * * *"
+    - cron: '0 4 * * *'
 
 jobs:
   auto-check-in:
     runs-on: ubuntu-latest
     env:
-      LTOKEN: ${{ secrets.LTOKEN }}
-      LTUID: ${{ secrets.LTUID }}
+      LTOKEN_V2: ${{ secrets.LTOKEN_V2 }}
+      LTMID_V2: ${{ secrets.LTMID_V2 }}
+      LTUID_V2: ${{ secrets.LTUID_V2 }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -18,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: '16'
 
       - name: Install dependencies
         run: npm ci
