@@ -3,12 +3,18 @@
     hoyolab-auto-check-in
 </h1>
 
+## Supported Games
+
+1. Genshin Impact
+2. Honkai: Star Rail
+3. Zenless Zone Zero
+
 ## Setup
 
 1. Adding LTOKEN and LTUID Actions secrets
 2. Waiting for claiming reward every day
 
-Note
+## Note
 
 - Must wating on 4:00 AM UTC to start claim reward
 - reward will be random claimed in 30 minutes after start claiming process
