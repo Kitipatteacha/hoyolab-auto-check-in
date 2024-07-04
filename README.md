@@ -11,7 +11,7 @@
 
 ## Setup
 
-1. Adding LTOKEN and LTUID Actions secrets
+1. Adding LTOKEN_V2, LTMID_V2, LTUID_V2 Actions secrets
 2. Waiting for claiming reward every day
 
 ## Note
