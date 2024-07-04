@@ -1,13 +1,22 @@
-const axios = require("axios");
+const axios = require('axios');
 
 const headers = {
   Cookie: `ltoken=${process.env.LTOKEN}; ltuid=${process.env.LTUID};`,
 };
-const genshinCheckInURL =
-  "https://sg-hk4e-api.hoyolab.com/event/sol/sign?lang=en-us&act_id=e202102251931481";
-
-const starRailCheckInURL =
-  "https://sg-public-api.hoyolab.com/event/luna/os/sign?lang=en-us&act_id=e202303301540311";
+const checkInList = [
+  {
+    url: 'https://sg-hk4e-api.hoyolab.com/event/sol/sign?lang=en-us&act_id=e202102251931481',
+    game: 'Genshin Impact',
+  },
+  {
+    url: 'https://sg-public-api.hoyolab.com/event/luna/os/sign?lang=en-us&act_id=e202303301540311',
+    game: 'Star Rail',
+  },
+  {
+    url: 'https://sg-act-nap-api.hoyolab.com/event/luna/zzz/os/sign?lang=en-us&act_id=e202406031448091',
+    game: 'Zenless Zone',
+  },
+];
 
 const randomDelayExecuteTime = () => {
   const MAX_THRESHOLD = 10 * 60 * 1000;
@@ -35,8 +44,11 @@ const checkIn = async (url, game) => {
 };
 
 const run = async () => {
-  await checkIn(genshinCheckInURL, "Genshin Impact");
-  await checkIn(starRailCheckInURL, "Star Rail");
+  const promises = checkInList.map(({ url, game }) => {
+    checkIn(url, game);
+  });
+
+  await Promise.all(promises);
 };
 
 run();
