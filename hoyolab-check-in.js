@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const headers = {
-  Cookie: `ltoken_v2=${process.env.LTOKEN_V2}; ltmid_v2=${process.env.LTMID_V2}; ltuid_v2=${LTUID_V2}`,
+  Cookie: `ltoken_v2=${process.env.LTOKEN_V2}; ltmid_v2=${process.env.LTMID_V2}; ltuid_v2=${process.env.LTUID_V2}`,
 };
 const checkInList = [
   {
@@ -21,12 +21,8 @@ const checkInList = [
 const randomDelayExecuteTime = () => {
   const MAX_THRESHOLD = 10 * 60 * 1000;
   const randomDelayExecuteTimeInMillisec = Math.random() * MAX_THRESHOLD;
-  console.log(
-    `will execute in :${randomDelayExecuteTimeInMillisec / (1000 * 60)} minutes`
-  );
-  return new Promise((resolve) =>
-    setTimeout(resolve, randomDelayExecuteTimeInMillisec)
-  );
+  console.log(`will execute in :${randomDelayExecuteTimeInMillisec / (1000 * 60)} minutes`);
+  return new Promise((resolve) => setTimeout(resolve, randomDelayExecuteTimeInMillisec));
 };
 
 const checkIn = async (url, game) => {
